@@ -1,0 +1,19 @@
+{
+    "name": "insua\/weather",
+    "description": "A weather SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "insua xeneizes",
+            "email": "insua@sohu.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Insua\\Weather\\": "src"
+        }
+    }
+}
