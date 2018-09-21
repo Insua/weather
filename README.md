@@ -2,6 +2,7 @@
 
 <p align="center"> A weather SDK.</p>
 
+[![Build Status](https://travis-ci.org/Insua/weather.svg?branch=master)](https://travis-ci.org/Insua/weather)
 
 ## Installing
 
@@ -11,7 +12,7 @@ $ composer require insua/weather -vvv
 
 ## Usage
 
-TODO
+Get Weather
 
 ## Contributing
 
