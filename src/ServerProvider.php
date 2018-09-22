@@ -8,7 +8,7 @@ class ServerProvider extends \Illuminate\Support\ServiceProvider
 
     public function register()
     {
-        $this->app->singletion(Weather::class, function (){
+        $this->app->singletion(Weather::class, function () {
             return new Weather(config('services.weather.key'));
         });
 

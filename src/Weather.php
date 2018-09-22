@@ -5,6 +5,7 @@ namespace Insua\Weather;
 use GuzzleHttp\Client;
 use Insua\Weather\Exceptions\HttpException;
 use Insua\Weather\Exceptions\InvalidArgumentException;
+
 /**
  * Class Weather.
  */
@@ -14,10 +15,12 @@ class Weather
      * @var string
      */
     protected $key;
+
     /**
      * @var array
      */
     protected $guzzleOptions = [];
+
     /**
      * Weather constructor.
      *
@@ -27,6 +30,7 @@ class Weather
     {
         $this->key = $key;
     }
+
     /**
      * @return \GuzzleHttp\Client
      */
@@ -34,6 +38,7 @@ class Weather
     {
         return new Client($this->guzzleOptions);
     }
+
     /**
      * @param array $options
      */
@@ -47,6 +52,7 @@ class Weather
      * @param string $format
      *
      * @return \Psr\Http\Message\ResponseInterface
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -60,6 +66,7 @@ class Weather
      * @param string $format
      *
      * @return \Psr\Http\Message\ResponseInterface
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -74,6 +81,7 @@ class Weather
      * @param string $format
      *
      * @return \Psr\Http\Message\ResponseInterface
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -94,14 +102,15 @@ class Weather
             'output' => $format,
             'extensions' => $type,
         ]);
+
         try {
             $response = $this->getHttpClient()->get($url, [
                 'query' => $query,
             ])->getBody()->getContents();
+
             return 'json' === $format ? json_decode($response, true) : $response;
         } catch (\Exception $e) {
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
         }
     }
 }
-

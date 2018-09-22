@@ -1,4 +1,5 @@
 <?php
+
 namespace Insua\Weather\Tests;
 
 use GuzzleHttp\Client;
