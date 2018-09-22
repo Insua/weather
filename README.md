@@ -3,6 +3,7 @@
 <p align="center"> A weather SDK.</p>
 
 [![Build Status](https://travis-ci.org/Insua/weather.svg?branch=master)](https://travis-ci.org/Insua/weather)
+![StyleCI build status](https://github.styleci.io/repos/146298044/shield) 
 
 ## Installing
 
